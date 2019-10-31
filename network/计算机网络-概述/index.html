@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>计算机网络 概述 - LennoLai Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u8ba1\u7b97\u673a\u7f51\u7edc \u6982\u8ff0";
+    var mkdocs_page_input_path = "network/\u8ba1\u7b97\u673a\u7f51\u7edc-\u6982\u8ff0.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> LennoLai Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../计算机网络-目录/">network</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">LennoLai Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>计算机网络 概述</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- GFM-TOC -->
+
+<ul>
+<li><a href="#网络的网络">网络的网络</a></li>
+<li><a href="#isp">ISP</a></li>
+<li><a href="#主机之间的通信方式">主机之间的通信方式</a></li>
+<li><a href="#电路交换与分组交换">电路交换与分组交换</a><ul>
+<li><a href="#1-电路交换">1. 电路交换</a></li>
+<li><a href="#2-分组交换">2. 分组交换</a></li>
+</ul>
+</li>
+<li><a href="#时延">时延</a><ul>
+<li><a href="#1-排队时延">1. 排队时延</a></li>
+<li><a href="#2-处理时延">2. 处理时延</a></li>
+<li><a href="#3-传输时延">3. 传输时延</a></li>
+<li><a href="#4-传播时延">4. 传播时延</a></li>
+</ul>
+</li>
+<li><a href="#计算机网络体系结构">计算机网络体系结构</a><ul>
+<li><a href="#1-五层协议">1. 五层协议</a></li>
+<li><a href="#2-osi">2. OSI</a></li>
+<li><a href="#3-tcpip">3. TCP/IP</a></li>
+<li><a href="#4-数据在各层之间的传递过程">4. 数据在各层之间的传递过程</a>
+<!-- GFM-TOC --></li>
+</ul>
+</li>
+</ul>
+<h1 id="_1">网络的网络</h1>
+<p>网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。</p>
+<div align="center"> <img src="pics/network-of-networks.gif" width="450"/> </div>
+
+<p><br></p>
+<h1 id="isp">ISP</h1>
+<p>互联网服务提供商 ISP 可以从互联网管理机构获得许多 IP 地址，同时拥有通信线路以及路由器等联网设备，个人或机构向 ISP 缴纳一定的费用就可以接入互联网。</p>
+<div align="center"> <img src="pics/72be01cd-41ae-45f7-99b9-a8d284e44dd4.png" width="500"/> </div>
+
+<p><br></p>
+<p>目前的互联网是一种多层次 ISP 结构，ISP 根据覆盖面积的大小分为第一层 ISP、区域 ISP 和接入 ISP。互联网交换点 IXP 允许两个 ISP 直接相连而不用经过第三个 ISP。</p>
+<div align="center"> <img src="pics/3be42601-9d33-4d29-8358-a9d16453af93.png" width="500"/> </div>
+
+<p><br></p>
+<h1 id="_2">主机之间的通信方式</h1>
+<ul>
+<li>客户-服务器（C/S）：客户是服务的请求方，服务器是服务的提供方。</li>
+</ul>
+<div align="center"> <img src="pics/914894c2-0bc4-46b5-bef9-0316a69ef521.jpg" width="240px"> </div>
+
+<p><br></p>
+<ul>
+<li>对等（P2P）：不区分客户和服务器。</li>
+</ul>
+<div align="center"> <img src="pics/42430e94-3137-48c0-bdb6-3cebaf9102e3.jpg" width="200px"> </div>
+
+<p><br></p>
+<h1 id="_3">电路交换与分组交换</h1>
+<h2 id="1">1. 电路交换</h2>
+<p>电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%。</p>
+<h2 id="2">2. 分组交换</h2>
+<p>每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</p>
+<p>在一个邮局通信系统中，邮局收到一份邮件之后，先存储下来，然后把相同目的地的邮件一起转发到下一个目的地，这个过程就是存储转发过程，分组交换也使用了存储转发过程。</p>
+<h1 id="_4">时延</h1>
+<p>总时延 = 排队时延 + 处理时延 + 传输时延 + 传播时延</p>
+<div align="center"> <img src="pics/4b2ae78c-e254-44df-9e37-578e2f2bef52.jpg" width="380"/> </div>
+
+<p><br></p>
+<h2 id="1_1">1. 排队时延</h2>
+<p>分组在路由器的输入队列和输出队列中排队等待的时间，取决于网络当前的通信量。</p>
+<h2 id="2_1">2. 处理时延</h2>
+<p>主机或路由器收到分组时进行处理所需要的时间，例如分析首部、从分组中提取数据、进行差错检验或查找适当的路由等。</p>
+<h2 id="3">3. 传输时延</h2>
+<p>主机或路由器传输数据帧所需要的时间。</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?delay=\frac{l(bit)}{v(bit/s)}" class="mathjax-pic"/></div> <br> -->
+
+<div align="center"> <img src="pics/dcdbb96c-9077-4121-aeb8-743e54ac02a4.png" width="150px"> </div>
+
+<p><br></p>
+<p>其中 l 表示数据帧的长度，v 表示传输速率。</p>
+<h2 id="4">4. 传播时延</h2>
+<p>电磁波在信道中传播所需要花费的时间，电磁波传播的速度接近光速。</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?delay=\frac{l(m)}{v(m/s)}" class="mathjax-pic"/></div> <br> -->
+
+<div align="center"> <img src="pics/a1616dac-0e12-40b2-827d-9e3f7f0b940d.png" width="150"> </div>
+
+<p><br></p>
+<p>其中 l 表示信道长度，v 表示电磁波在信道上的传播速度。</p>
+<h1 id="_5">计算机网络体系结构</h1>
+<div align="center"> <img src="pics/0fa6c237-a909-4e2a-a771-2c5485cd8ce0.png" width="450"/> </div>
+
+<p><br></p>
+<h2 id="1_2">1. 五层协议</h2>
+<ul>
+<li>
+<p><strong>应用层</strong> ：为特定应用程序提供数据传输服务，例如 HTTP、DNS 等协议。数据单位为报文。</p>
+</li>
+<li>
+<p><strong>传输层</strong> ：为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。</p>
+</li>
+<li>
+<p><strong>网络层</strong> ：为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。</p>
+</li>
+<li>
+<p><strong>数据链路层</strong> ：网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧。</p>
+</li>
+<li>
+<p><strong>物理层</strong> ：考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。</p>
+</li>
+</ul>
+<h2 id="2-osi">2. OSI</h2>
+<p>其中表示层和会话层用途如下：</p>
+<ul>
+<li>
+<p><strong>表示层</strong> ：数据压缩、加密以及数据描述，这使得应用程序不必关心在各台主机中数据内部格式不同的问题。</p>
+</li>
+<li>
+<p><strong>会话层</strong> ：建立及管理会话。</p>
+</li>
+</ul>
+<p>五层协议没有表示层和会话层，而是将这些功能留给应用程序开发者处理。</p>
+<h2 id="3-tcpip">3. TCP/IP</h2>
+<p>它只有四层，相当于五层协议中数据链路层和物理层合并为网络接口层。</p>
+<p>TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接使用 IP 层或者网络接口层。</p>
+<div align="center"> <img src="pics/48d79be8-085b-4862-8a9d-18402eb93b31.png" width="250"/> </div>
+
+<p><br></p>
+<!-- ![图片](pics/48d79be8-085b-4862-8a9d-18402eb93b31.png) {:width="100px" height="100px"} -->
+
+<h2 id="4_1">4. 数据在各层之间的传递过程</h2>
+<p>在向下的过程中，需要添加下层协议所需要的首部或者尾部，而在向上的过程中不断拆开首部和尾部。</p>
+<p>路由器只有下面三层协议，因为路由器位于网络核心中，不需要为进程或者应用程序提供服务，因此也就不需要传输层和应用层。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
